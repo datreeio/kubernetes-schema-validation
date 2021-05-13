@@ -77,6 +77,7 @@ All files are containing the same Kubernetes configurations.
 **kubectl dry-run in server mode:** `kubectl apply -f misconfigs/ --dry-run=server`  
 
 ### running benchmark tests
+:wrench: prerequisite - [hyperfine](https://github.com/sharkdp/hyperfine) installed  
 **kubeval:** `hyperfine --warmup 5 -i 'kubeval --strict benchmark/*.yaml -v "1.18.0"'`  
 **kubeconform:** `hyperfine --warmup 5 -i 'kubeconform -strict benchmark/*.yaml -v'`  
 **kubectl dry-run in client mode:** `hyperfine --warmup 5 -i 'kubectl apply -f benchmark/ --dry-run=client'`  
