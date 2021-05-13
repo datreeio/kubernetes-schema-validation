@@ -7,41 +7,41 @@ This dir contains seven Kubernetes manifest files with a different misconfigurat
 **reason:** `apps/v1beta2` was deprecated for resource type "Deployment" in Kuberenetes version 1.18.0  
 
 ### invalid-kind-value.yaml
-wrong: `kind: pod`  
-correct: `kind: Pod`  
-reason: resource type must start with a capita letter - `Pod`  
+**wrong:** `kind: pod`  
+**correct:** `kind: Pod`  
+**reason:** resource type must start with a capita letter - `Pod`  
 
 ### invalid-label-value.yaml
-wrong: `owner: ---`  
-correct: `owner: frodo-baggins`  
-reason: labels values must start and end with an alphanumeric letter
+**wrong:** `owner: ---`  
+**correct:** `owner: frodo-baggins`  
+**reason:** labels values must start and end with an alphanumeric letter
 
 ### invalid-protocol-type.yaml
-wrong: `protocol: 22`  
-correct: `protocol: TCP`  
-reason: protocol type must be a string
+**wrong:** `protocol: 22`  
+**correct:** `protocol: TCP`  
+**reason:** protocol type must be a string
 
 ### invalid-spec-key.yaml
-wrong: `Spec:`  
-correct: `spec:`  
-reason: `spec` must start with a small s'
+**wrong:** `Spec:`  
+**correct:** `spec:`  
+**reason:** `spec` must start with a small s'
 
 ### missing-image.yaml
-wrong:  
+**wrong:**  
 ```yaml
 containers:
     - name: web
 ```  
-correct:
+**correct:**
 ```yaml
 containers:
     - name: web
       image: nginx
 ```  
-reason: each container must include an image name
+**reason:** each container must include an image name
 
 ### wrong-k8s-indentation.yaml
-wrong:  
+**wrong:**  
 ```yaml
 spec:
 containers:
@@ -52,7 +52,7 @@ containers:
         containerPort: 80
         protocol: TCP
 ```
-correct:  
+**correct:**  
 ```yaml
 spec:
   containers:
@@ -63,7 +63,7 @@ spec:
       containerPort: 80
       protocol: TCP
 ```  
-reason: Kuberenetes\YAML indentation requires one tab space when listing `containers` 
+**reason:** Kuberenetes\YAML indentation requires one tab space when listing `containers` 
 
 # benchmark
 This dir contains 100 valid Kubernetes manifest files.  
