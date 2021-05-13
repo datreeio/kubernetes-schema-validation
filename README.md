@@ -1,7 +1,7 @@
 # misconfigs
 This dir contains seven Kubernetes manifest files with a different misconfiguration in each one:  
 
-### api-deprecation.yaml
+### (api-deprecation.yaml)[https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/api-deprecation.yaml]
 **wrong:** `apiVersion: apps/v1beta2`  
 **correct:** `apiVersion: apps/v1`  
 **reason:** `apps/v1beta2` was deprecated for resource type "Deployment" in Kuberenetes version 1.18.0  
