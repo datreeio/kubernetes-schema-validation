@@ -68,3 +68,16 @@ spec:
 # benchmark
 This dir contains 100 valid Kubernetes manifest files.  
 All files are containing the same Kubernetes configurations. 
+
+# commands
+### running validation tests
+**kubeval:** `kubeval --strict misconfigs/*.yaml -v "1.18.0"`  
+**kubeconform:** `kubeconform -strict misconfigs/*.yaml -v`  
+**kubectl dry-run in client mode:** `kubectl apply -f misconfigs/ --dry-run=client`  
+**kubectl dry-run in server mode:** `kubectl apply -f misconfigs/ --dry-run=server`  
+
+### running benchmark tests
+**kubeval:** `hyperfine --warmup 5 -i 'kubeval --strict benchmark/*.yaml -v "1.18.0"'`  
+**kubeconform:** `hyperfine --warmup 5 -i 'kubeconform -strict benchmark/*.yaml -v'`  
+**kubectl dry-run in client mode:** `hyperfine --warmup 5 -i 'kubectl apply -f benchmark/ --dry-run=client'`  
+**kubectl dry-run in server mode:** `hyperfine --warmup 5 -i 'kubectl apply -f benchmark/ --dry-run=server'`  
