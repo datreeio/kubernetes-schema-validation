@@ -1,12 +1,10 @@
-# Kubernetes schema validation
-
-## misconfigs
+# misconfigs
 This dir contains seven Kubernetes manifest files with a different misconfiguration in each one:  
 
 ### api-deprecation.yaml
-wrong: `apiVersion: apps/v1beta2`  
-correct: `apiVersion: apps/v1`  
-reason: `apps/v1beta2` was deprecated for resource type "Deployment" in Kuberenetes version 1.18.0  
+**wrong:** `apiVersion: apps/v1beta2`  
+**correct:** `apiVersion: apps/v1`  
+**reason:** `apps/v1beta2` was deprecated for resource type "Deployment" in Kuberenetes version 1.18.0  
 
 ### invalid-kind-value.yaml
 wrong: `kind: pod`  
@@ -67,6 +65,6 @@ spec:
 ```  
 reason: Kuberenetes\YAML indentation requires one tab space when listing `containers` 
 
-## benchmark
+# benchmark
 This dir contains 100 valid Kubernetes manifest files.  
 All files are containing the same Kubernetes configurations. 
