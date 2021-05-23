@@ -24,7 +24,7 @@ This dir contains seven Kubernetes manifest files, each with a different misconf
 ### [invalid-spec-key.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/invalid-spec-key.yaml#L7)
 **wrong:** `Spec:`  
 **correct:** `spec:`  
-**reason:** `spec` must start with a small `s`
+**reason:** `spec` must start with a small 's'
 
 ### [missing-image.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/missing-image.yaml#L9)
 **wrong:**  
