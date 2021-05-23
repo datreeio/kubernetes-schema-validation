@@ -1,5 +1,5 @@
 # misconfigs
-This dir contains seven Kubernetes manifest files with a different misconfiguration in each one:  
+This dir contains seven Kubernetes manifest files, each with a different misconfiguration:  
 
 ### [api-deprecation.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/api-deprecation.yaml#L1)
 **wrong:** `apiVersion: apps/v1beta2`  
@@ -24,7 +24,7 @@ This dir contains seven Kubernetes manifest files with a different misconfigurat
 ### [invalid-spec-key.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/invalid-spec-key.yaml#L7)
 **wrong:** `Spec:`  
 **correct:** `spec:`  
-**reason:** `spec` must start with a small s'
+**reason:** `spec` must start with a small `s`
 
 ### [missing-image.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/missing-image.yaml#L9)
 **wrong:**  
@@ -67,7 +67,7 @@ spec:
 
 # benchmark
 This dir contains 100 valid Kubernetes manifest files.  
-All files are containing the same Kubernetes configurations. 
+All files contain the same Kubernetes configuration. 
 
 # commands
 ### running schema validation tests
