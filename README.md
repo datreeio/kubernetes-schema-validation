@@ -69,6 +69,10 @@ spec:
 ```  
 **reason:** Kuberenetes\YAML indentation requires one tab space when listing `containers` 
 
+## Misconfigurations coverage summary
+
+[![misconfigurations-coverage](https://raw.githubusercontent.com/datreeio/kubernetes-schema-validation/main/images/comparing-table.png)](#) 
+
 # benchmark
 This dir contains 100 valid Kubernetes manifest files.  
 All files contain the same Kubernetes configuration. 
