@@ -69,6 +69,8 @@ spec:
 This dir contains 100 valid Kubernetes manifest files.  
 All files are containing the same Kubernetes configurations. 
 
+[![benchmark-results](https://raw.githubusercontent.com/datreeio/kubernetes-schema-validation/main/images/benchmark-test-results.png)](#) 
+
 # commands
 ### running schema validation tests
 **kubeval:** `kubeval --strict misconfigs/*.yaml -v "1.18.0"`  
