@@ -1,3 +1,7 @@
+# About this reposiroty
+This repository contains resources for the blog post:  
+"[A Deep Dive Into Kubernetes Schema Validation](https://datree.io/resources/kubernetes-schema-validation/?utm_source=github&utm_medium=schema_validation_repo)"
+
 # misconfigs
 This dir contains seven Kubernetes manifest files, each with a different misconfiguration:  
 
