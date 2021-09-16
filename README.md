@@ -8,12 +8,12 @@ This dir contains seven Kubernetes manifest files, each with a different misconf
 ### [api-deprecation.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/api-deprecation.yaml#L1)
 **wrong:** `apiVersion: apps/v1beta2`  
 **correct:** `apiVersion: apps/v1`  
-**reason:** `apps/v1beta2` was deprecated for resource type "Deployment" in Kuberenetes version 1.18.0  
+**reason:** `apps/v1beta2` was deprecated for resource type "Deployment" in Kubernetes version 1.18.0
 
 ### [invalid-kind-value.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/invalid-kind-value.yaml#L2)
 **wrong:** `kind: pod`  
 **correct:** `kind: Pod`  
-**reason:** resource type must start with a capita letter - `Pod`  
+**reason:** resource type must start with a capital letter - `Pod`
 
 ### [invalid-label-value.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/invalid-lable-value.yaml#L6)
 **wrong:** `owner: ---`  
@@ -67,7 +67,7 @@ spec:
       containerPort: 80
       protocol: TCP
 ```  
-**reason:** Kuberenetes\YAML indentation requires one tab space when listing `containers` 
+**reason:** Kubernetes\YAML indentation requires one tab space when listing `containers`
 
 ## Misconfigurations coverage summary
 
@@ -89,7 +89,7 @@ All files contain the same Kubernetes configuration.
 ### running benchmark tests
 :wrench: prerequisite - [hyperfine](https://github.com/sharkdp/hyperfine) installed  
 
-**kubeval:** `hyperfine --warmup 5 'kubeval --strict benchmark/*.yaml -v "1.18.0"'`  
+**kubeval:** `hyperfine --warmup 5 'kubeval --strict benchmark/*.yaml -v "1.18.0"'`
 **kubeconform:** `hyperfine --warmup 5 'kubeconform -strict benchmark/*.yaml'`  
 **kubectl dry-run in client mode:** `hyperfine --warmup 5 'kubectl apply -f benchmark/ --dry-run=client'`  
 **kubectl dry-run in server mode:** `hyperfine --warmup 5 'kubectl apply -f benchmark/ --dry-run=server'`  
