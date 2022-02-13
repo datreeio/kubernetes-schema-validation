@@ -16,6 +16,11 @@ This dir contains seven Kubernetes manifest files, each with a different misconf
 **correct:** `owner: frodo-baggins`  
 **reason:** labels values must start and end with an alphanumeric letter
 
+### [invalid-name-value.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/invalid-name-value.yaml#L4)
+**wrong:** `name: invalid_name`  
+**correct:** `name: valid-name`  
+**reason:** names contain only lowercase alphanumeric characters, '-' or '.'
+
 ### [invalid-protocol-type.yaml](https://github.com/datreeio/kubernetes-schema-validation/blob/main/misconfigs/invalid-protocol-type.yaml#L14)
 **wrong:** `protocol: 22`  
 **correct:** `protocol: TCP`  
